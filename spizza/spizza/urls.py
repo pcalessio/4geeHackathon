@@ -15,4 +15,6 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'auth/', include('social_auth.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^main/', 'spizza.views.main'),
+
 )

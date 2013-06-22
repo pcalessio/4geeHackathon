@@ -1,5 +1,8 @@
-window.MY_USER_NAME = 'Daniel Pyrathon';
 var app = angular.module('spizza', []);
+app.config(function($interpolateProvider) {
+  $interpolateProvider.startSymbol('{[{');
+  $interpolateProvider.endSymbol('}]}');
+});
 
 app.factory('Firebase', function() {
     return new Firebase('https://4gee.firebaseIO.com/conversations');
@@ -15,7 +18,7 @@ app.controller('MainController', function($scope, Firebase) {
 app.controller('SubmitController', function($scope, Firebase) {
     $scope.addConversation = function() {
         Firebase.push({
-            requester: MY_USER_NAME,
+            requester: window.AUTH.first_name + ' ' + window.AUTH.last_name,
             title: $scope.formTitle
             //tags: $scope.formTags
         });
