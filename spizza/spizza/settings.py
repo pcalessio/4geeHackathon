@@ -117,12 +117,11 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.admin',
     'social_auth',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
@@ -180,8 +179,8 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
-LINKEDIN_CONSUMER_KEY        = '654d2bd9-fb6c-4ecf-8f09-fc674797dce1'
-LINKEDIN_CONSUMER_SECRET     = 'ea4f2a9d-6835-45ac-aa5e-1101242b7dbd'
+LINKEDIN_CONSUMER_KEY        = '8a7b6mnukin6'
+LINKEDIN_CONSUMER_SECRET     = 'EfcPSuFIwPkRF33O'
 
 #API Key:
 # 8a7b6mnukin6
@@ -192,20 +191,9 @@ LINKEDIN_CONSUMER_SECRET     = 'ea4f2a9d-6835-45ac-aa5e-1101242b7dbd'
 # OAuth User Secret:
 # ea4f2a9d-6835-45ac-aa5e-1101242b7dbd
 
-
-
-
-
 LOGIN_URL          = '/login-form/'
 LOGIN_REDIRECT_URL = '/logged-in/'
 LOGIN_ERROR_URL    = '/login-error/'
 
-SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/another-login-url/'
-SOCIAL_AUTH_NEW_USER_REDIRECT_URL = '/new-users-redirect-url/'
-SOCIAL_AUTH_NEW_ASSOCIATION_REDIRECT_URL = '/new-association-redirect-url/'
-SOCIAL_AUTH_DISCONNECT_REDIRECT_URL = '/account-disconnected-redirect-url/'
-SOCIAL_AUTH_BACKEND_ERROR_URL = '/new-error-url/'
-SOCIAL_AUTH_COMPLETE_URL_NAME  = 'socialauth_complete'
-SOCIAL_AUTH_ASSOCIATE_URL_NAME = 'socialauth_associate_complete'
-
-SOCIAL_AUTH_USER_MODEL = 'spizza.User'
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
+SOCIAL_AUTH_BACKEND_ERROR_URL = '/error/'
